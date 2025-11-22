@@ -1,0 +1,171 @@
+/* layout */
+.sell-container {
+    max-width: 720px;
+    margin: 50px auto 80px;
+    padding: 0 20px;
+}
+
+/* blocks */
+.block {
+    margin-bottom: 65px;
+}
+
+.block:last-of-type {
+    margin-bottom: 118px;
+}
+
+.block-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #5f5f5f;
+    border-bottom: 1px solid #5f5f5f;
+    margin: 0 0 12px;
+    padding-bottom: 12px;
+}
+
+.form-label-image {
+    margin-top: 43px;
+}
+
+.row {
+    display: block;
+    margin: 36px 0;
+}
+
+.row-label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* ====== 画像エリア ====== */
+.drop-wrap {
+    position: relative;
+}
+
+/* 初期：ボタンは枠の中央に重ねる */
+.pick-btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    cursor: pointer;
+    margin-top: 0;
+    padding: 12px 26px;
+    font-size: 16px;
+}
+
+.dropzone {
+    position: relative;
+    width: 100%;
+    max-width: 680px;
+    min-height: 150px;
+    border: 1px dashed #5f5f5f;
+    border-radius: 4px;
+    /* background: #fafafa; */
+    overflow: hidden;
+    margin: 5px auto 0;
+}
+
+.dropzone img {
+    display: none;
+    width: 100%;
+    height: auto;
+    max-width: 680px;
+    background: #fafafa;
+}
+
+.drop-wrap.has-image .dropzone img {
+    display: block;
+}
+
+.drop-wrap.has-image .dropzone .placeholder {
+    display: none;
+}
+
+/* 画像が入ったらボタンは通常フロー＝枠の下に移動 */
+.drop-wrap.has-image .pick-btn {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+}
+
+/* inputs */
+.input,
+.select,
+.textarea {
+    width: 100%;
+    border: 1px solid #5f5f5f;
+    border-radius: 4px;
+    padding: 10px 12px;
+    font-size: 16px;
+    background: #fff;
+    margin-top: 7px;
+}
+
+.select option {
+    background-color: #636769;
+    color: #fff;
+}
+
+.textarea {
+    height: 125px;
+}
+
+.price-wrap {
+    position: relative;
+}
+
+.price-wrap .yen {
+    position: absolute;
+    left: 12px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    transform: translateY(3px);
+}
+
+.price-wrap .price {
+    padding-left: 40px;
+}
+
+/* categories pills */
+.tag-list {
+    padding: 30px 0 30px 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px 19px;
+}
+
+.tag {
+    position: relative;
+    display: inline-flex;
+}
+
+.tag input {
+    position: absolute;
+    opacity: 0;
+    inset: 0;
+    cursor: pointer;
+}
+
+.tag span {
+    display: inline-block;
+    padding: 3px 15px;
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    background: #fff;
+    transition: 0.15s;
+}
+
+.tag input:checked + span {
+    background: var(--color-accent);
+    color: #fff;
+}

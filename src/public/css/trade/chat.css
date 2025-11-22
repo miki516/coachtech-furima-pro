@@ -1,0 +1,655 @@
+.trade-layout {
+    display: flex;
+    height: calc(100vh - 80px);
+}
+
+/* -----------------------
+   サイドバー
+------------------------ */
+.trade-sidebar {
+    width: 259px;
+    background: #868686;
+    padding: 13px 32px;
+    height: calc(100vh - 80px);
+}
+
+.sidebar-title {
+    font-weight: bold;
+    margin-bottom: 56px;
+    color: white;
+    font-size: 30px;
+}
+
+.sidebar-item {
+    display: block;
+    background: #eeefeb;
+    padding: 5px;
+    margin-bottom: 43px;
+    border-radius: 5px;
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* -----------------------
+   ヘッダー
+------------------------ */
+.trade-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.trade-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #5f5f5f;
+    padding: 13px 37px;
+}
+
+.trade-header-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trade-header-title {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.user-icon {
+    width: 79px;
+    height: 79px;
+    background: #ccc;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.user-icon-sm {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #ccc;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.user-icon-sm img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.btn-complete {
+    background: #ff8282;
+    padding: 15px 16px;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+/* -----------------------
+   商品情報
+------------------------ */
+.trade-product-box {
+    display: flex;
+    gap: 40px;
+    border-bottom: 2px solid #5f5f5f;
+    padding: 13px 40px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 31px;
+}
+
+.product-image {
+    width: 203px;
+    height: 206px;
+    background: #ccc;
+    object-fit: cover;
+}
+
+.product-name {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+    line-height: normal;
+}
+
+.product-price {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* -----------------------
+   メッセージ一覧
+------------------------ */
+.trade-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 25px;
+}
+
+.message-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.message-row.me {
+    align-items: flex-end;
+}
+
+.message-header {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+}
+
+.message-row.me .message-header {
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+}
+
+.message-bubble {
+    background: #d9d9d9;
+    padding: 18px 25px;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 461px;
+    position: relative;
+}
+
+.message-user {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.message-text {
+    font-size: 20px;
+}
+
+/* ============================
+   メッセージ編集フォーム
+============================ */
+
+.message-edit-form {
+    display: none;
+    margin-top: 0;
+    width: 100%;
+    max-width: 461px;
+}
+
+.message-edit-textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 18px 25px;
+    font-size: 20px;
+    line-height: 1.5;
+    max-height: 300px;
+    resize: none;
+}
+
+.message-edit-actions {
+    margin-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.message-edit-save,
+.message-edit-cancel {
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+}
+
+.message-edit-save {
+    background: #ff5555;
+    border-color: #ff5555;
+    color: #fff;
+}
+
+.edit-btn,
+.delete-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #5f5f5f;
+    cursor: pointer;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.message-actions {
+    text-align: right;
+    font-size: 15px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 21px;
+}
+
+.message-image {
+    margin-top: 8px;
+}
+
+.message-image img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 8px;
+    display: block;
+}
+
+.image-preview {
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-left: 8px;
+    margin-right: 4px;
+    position: relative;
+    overflow: hidden;
+    display: none; /* デフォルトは非表示 */
+    flex-shrink: 0;
+}
+
+.message-edit-image {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #666;
+    position: relative;
+    display: inline-block;
+}
+
+.message-edit-image img {
+    display: block;
+    margin-bottom: 4px;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 8px;
+}
+
+.message-edit-image-wrapper {
+    margin-top: 12px;
+}
+
+.message-edit-image-remove {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 14px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* -----------------------
+   フォーム
+------------------------ */
+.trade-form {
+    display: block;
+    padding: 0px 25px 10px;
+    flex-shrink: 0;
+}
+
+.trade-form-controls {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.trade-form textarea {
+    font-size: 20px;
+    flex: 1;
+    border-radius: 8px;
+    border: 1px solid #5f5f5f;
+    margin-right: 9px;
+    padding: 10px;
+    resize: none;
+}
+
+.trade-form textarea,
+.image-add-btn {
+    height: 44px;
+    box-sizing: border-box;
+    margin-left: 9px;
+}
+
+.trade-form textarea::placeholder {
+    color: #7b7b7b;
+    font-size: 20px;
+    font-weight: 700;
+    opacity: 1;
+}
+
+.image-add-btn {
+    display: inline-flex;
+    align-items: center;
+    border: solid 2px #ff5555;
+    padding: 8px 21px;
+    color: #ff5555;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.send-btn {
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.send-icon {
+    width: 80px;
+}
+
+.image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.image-preview-remove {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 12px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* ============================
+   評価モーダル
+============================ */
+.rating-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.rating-modal.is-open {
+    display: flex;
+}
+
+.rating-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: transparent;
+}
+
+.rating-modal-body {
+    position: relative;
+    background: #fdfce6;
+    border-radius: 15px;
+    max-width: 598px;
+    width: calc(100% - 32px);
+    border: 1px solid;
+    padding: 19px 0 18px;
+}
+
+.rating-modal-header {
+    padding: 0 23px 15px;
+    border-bottom: 1px solid;
+    margin-bottom: 19px;
+}
+
+.rating-modal-title {
+    font-size: 35px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.rating-modal-main {
+    padding: 0 23px 24px;
+    border-bottom: 1px solid;
+    margin-bottom: 16px;
+}
+
+.rating-modal-text {
+    margin: 0 0 29px;
+    color: #868686;
+    font-size: 20px;
+}
+
+/* 星 */
+.rating-stars {
+    display: flex;
+    justify-content: center;
+}
+
+.rating-star {
+    font-size: 100px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    line-height: 1;
+    color: #d9d9d9;
+}
+
+.rating-star.is-active {
+    color: #fff048;
+}
+
+.rating-modal-actions {
+    padding: 0 14px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.rating-modal-submit-btn {
+    background: #ff8282;
+    border: none;
+    color: #fff;
+    height: 49px;
+    border-radius: 5px;
+    font-size: 24px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+}
+
+/* =========================================
+   タブレット向け（768〜850px）
+========================================= */
+@media (min-width: 768px) and (max-width: 850px) {
+    .trade-layout {
+        height: auto;
+        min-height: calc(100vh - 80px);
+    }
+
+    .trade-sidebar {
+        width: 220px;
+        padding: 10px 16px;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+    .sidebar-title {
+        font-size: 22px;
+        margin-bottom: 24px;
+    }
+
+    .sidebar-item {
+        font-size: 16px;
+        margin-bottom: 16px;
+        padding: 6px 8px;
+    }
+
+    /* メインエリア */
+    .trade-main {
+        flex: 1;
+        min-width: 0;
+    }
+
+    /* ヘッダー */
+    .trade-header {
+        padding: 10px 16px;
+        column-gap: 12px;
+        row-gap: 8px;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .trade-header-left {
+        gap: 10px;
+        align-items: center;
+        min-width: 0;
+    }
+
+    .user-icon {
+        width: 56px;
+        height: 56px;
+    }
+
+    .trade-header-title {
+        font-size: 24px;
+        line-height: 1.3;
+        word-break: break-word;
+    }
+
+    .btn-complete {
+        font-size: 16px;
+        padding: 10px 14px;
+        border-radius: 24px;
+    }
+
+    /* 商品情報 */
+    .trade-product-box {
+        padding: 10px 16px;
+        gap: 16px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .product-image {
+        width: 150px;
+        height: 150px;
+        flex-shrink: 0;
+    }
+
+    .product-info {
+        gap: 12px;
+    }
+
+    .product-name {
+        font-size: 26px;
+    }
+
+    .product-price {
+        font-size: 20px;
+    }
+
+    /* メッセージ一覧 */
+    .trade-messages {
+        padding: 12px 14px;
+    }
+
+    .message-bubble {
+        max-width: 100%;
+    }
+
+    .message-user,
+    .message-text {
+        font-size: 16px;
+    }
+
+    .user-icon-sm {
+        width: 44px;
+        height: 44px;
+    }
+
+    /* 入力フォーム */
+    .trade-form {
+        padding: 8px 14px 12px;
+    }
+
+    .trade-form-controls {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .trade-form textarea {
+        font-size: 16px;
+        margin-right: 0;
+        margin-left: 0;
+        min-height: 44px;
+    }
+
+    .image-preview {
+        width: 56px;
+        height: 56px;
+        margin-left: 0;
+    }
+
+    .image-add-btn {
+        font-size: 14px;
+        padding: 6px 8px;
+        margin-left: 0;
+    }
+
+    .send-icon {
+        width: 56px;
+    }
+
+    .rating-modal-title {
+        font-size: 26px;
+    }
+
+    .rating-modal-text {
+        font-size: 16px;
+    }
+
+    .rating-star {
+        font-size: 70px;
+    }
+
+    .rating-modal-submit-btn {
+        font-size: 18px;
+        height: 44px;
+        padding: 8px 14px;
+    }
+}

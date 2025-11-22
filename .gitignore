@@ -1,0 +1,20 @@
+# Laravel
+/node_modules/
+/src/vendor/
+/src/node_modules/
+/src/storage/*.key
+/src/storage/logs/
+/src/public/storage
+/src/.env
+.phpunit.result.cache
+.env
+
+# Docker
+/docker/mysql/data/
+/docker/mysql/logs/
+/docker/nginx/logs/
+/docker/php/log/
+
+# products 画像を含める
+!storage/app/public/products/
+!storage/app/public/products/**

@@ -1,0 +1,8 @@
+*
+!.gitignore
+
+# 追加
+!products/
+!products/**
+!profiles/
+!profiles/**
